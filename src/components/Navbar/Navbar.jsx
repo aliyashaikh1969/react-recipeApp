@@ -20,9 +20,10 @@ export const Navbar = () => {
                 </form>
             </li>
             <li>
+                <NavLink to="/" className="hover:text-black duration-300 mr-5">Home</NavLink>
+            
                 <NavLink to="/favourite" className="hover:text-black duration-300">Favourite</NavLink>
             </li>
-            {/* <button onClick={handleSubmit}>hjshjhjd</button> */}
         </ul>
     </div>
   )
