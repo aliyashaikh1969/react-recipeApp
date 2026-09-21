@@ -30,4 +30,10 @@ export default [
       ],
     },
   },
+  {
+    // A context file exports both a provider component and a hook (useRecipes, useToast).
+    // That is normal for context files, so this Fast Refresh rule is switched off for them.
+    files: ['src/context/**/*.jsx'],
+    rules: { 'react-refresh/only-export-components': 'off' },
+  },
 ]

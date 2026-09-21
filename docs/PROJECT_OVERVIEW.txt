@@ -1,0 +1,81 @@
+FOOD RECIPE APP
+===============
+
+
+PROJECT DESCRIPTION
+-------------------
+
+Food Recipe is a responsive web application for finding and saving recipes.
+You can search for recipes by keyword (for example "pasta" or "chicken"),
+open a recipe to see its ingredients, cooking time and servings, and save
+your favourite recipes so they are still there the next time you visit.
+
+The recipe data comes from the free, public Forkify API
+(https://forkify-api.herokuapp.com/v2). It needs no account and no API key.
+
+The app is built with React and works on phones, tablets and desktops.
+It runs entirely in the browser: there is no server or database of its own.
+Your favourite recipes are stored in your browser (localStorage).
+
+
+FEATURES
+--------
+
+Finding recipes
+  - Search by keyword, using the Enter key or the Search button.
+  - Quick-search buttons (Pizza, Pasta, Chicken, Salad, Burger, Cake).
+  - A "Popular recipes" section on the home page before you search.
+  - The search text is cleaned up (extra spaces removed). Empty or
+    over-long searches are rejected with a clear message.
+  - Results show how many recipes were found, 24 at a time, with a
+    "Show more" button for the rest.
+
+Recipes and favourites
+  - Recipe page with image, publisher, cooking time, servings, the
+    ingredient list, and a link to the original directions.
+  - Heart button on every recipe card and on the recipe page to add or
+    remove a favourite.
+  - Favourites page listing all saved recipes, with a count in the navbar.
+  - Favourites are saved in localStorage, so they survive a page refresh.
+  - Small notifications (toasts) confirm each save and removal.
+
+Reliability and polish
+  - Loading placeholders while recipes are loading.
+  - Friendly empty states: "No recipes found" and "No favourites yet",
+    both with suggestions for what to do next.
+  - Clear error messages with a "Try again" button when the internet
+    connection or the API fails.
+  - A "Page not found" page for unknown addresses.
+  - A placeholder picture when a recipe image is missing or fails to load.
+  - Responsive layout that works from 320px phones to wide desktops,
+    with no horizontal scrolling.
+  - Accessibility: labelled buttons and inputs, visible keyboard focus,
+    screen-reader announcements for errors, and reduced-motion support.
+
+Performance
+  - Images load lazily (only when they are close to the screen).
+  - API answers are remembered for 5 minutes, so repeating a search or
+    reopening a recipe does not call the API again.
+  - If a new search starts before the previous one finishes, the old
+    answer is ignored.
+  - Only 24 results are drawn at a time, so large searches stay fast.
+
+
+TECHNOLOGIES USED
+-----------------
+
+  React 19            User interface, hooks, and Context API for shared state
+  Vite 6              Development server and production build
+  React Router 7      Page navigation (Home, Recipe Details, Favourites, Not Found)
+  Tailwind CSS 4      Styling and responsive layout
+  React Icons         Icons (heart, search, chef hat, and others)
+  Forkify API         Source of the recipe data
+  localStorage        Saving favourite recipes in the browser
+  ESLint              Code quality checks
+  JavaScript (ES6+)   fetch, async/await, modules
+
+Tools needed to run the project: Node.js 18 or newer and npm.
+
+To start the project:
+  npm install
+  npm run dev
